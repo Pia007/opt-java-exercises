@@ -22,14 +22,23 @@ public class C4Last8 {
 }
 
 class Last8 {
+
+    // init array with 8 items
     private int[] last8 = new int[8];
+
+    // init index to 0
     private int index = 0;
     
+    // add method 
+        // add value to array
+        // increment index to the sum of the index + 1 and the remainder of dividing by 8
     public void add(int value) {
         last8[index] = value;
         index = (index + 1) % 8;
     }
     
+    // last method
+        // return array
     public int[] last() {
         return last8;
     }
