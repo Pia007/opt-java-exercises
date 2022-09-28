@@ -34,6 +34,7 @@ class Last8 {
         // increment index to the sum of the index + 1 and the remainder of dividing by 8
     public void add(int value) {
         last8[index] = value;
+        // ensures that the last eight values are return
         index = (index + 1) % 8;
     }
     
