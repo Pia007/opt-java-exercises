@@ -13,7 +13,7 @@ public class MergeAllContents {
         
         // create a print writer object
             // will contain the merged contents of all files
-        PrintWriter printWriter = new PrintWriter("merged.text");
+        PrintWriter printWriter = new PrintWriter("merged.txt");
 
         // create a file object that points to the folder that contains all of the files
         File file = new File("src/files/");
