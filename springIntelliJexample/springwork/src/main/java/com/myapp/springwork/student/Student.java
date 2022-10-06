@@ -1,9 +1,24 @@
 package com.myapp.springwork.student;
 
+import javax.persistence.*;
 import java.time.LocalDate;
 
-//P2a - create the student model
+//P7 Map student to table in db
+@Entity
+@Table
 public class Student {
+    // create the sequence
+    @Id
+    @SequenceGenerator(
+            name = "student_sequence",
+            sequenceName = "student_sequence",
+            allocationSize = 1   // increment of 1
+    )
+
+    @GeneratedValue(
+        strategy = GenerationType.SEQUENCE,
+            generator = "student_sequence"
+    )
 
     //P2b fields
     private Long id;
