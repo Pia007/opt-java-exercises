@@ -35,13 +35,5 @@ public class SpringworkApplication {
 			)
 		);
 	}
-
-	// 1cif wanted to get a Json array
-	// @GetMapping
-	//public List<String> helloString() {
-	//	return List.of("Hello", "World");
-	//}
-
-	// P2 - create student package in com.myapp.springwork
-
+	// P2g start server and will an array with one obj
 }
