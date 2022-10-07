@@ -2,6 +2,7 @@ package com.myapp.springwork.student;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.time.Period;
 
 //P7 Map student to table in db
 @Entity
@@ -25,36 +26,36 @@ public class Student {
     private String name;
     private String email;
     private LocalDate dob;
+
+   // P10 -  Store age based on calculation
+        // @Transient - will no longer be a column in the db
+    @Transient
     private Integer age;
 
-    // P2c constructors
     // no arg - constructor
     public Student() {
     }
 
     // everything constructor
+    //P10 - remove age from constructors
     public Student(Long id,
                             String name,
                             String email,
-                            LocalDate dob,
-                            Integer age) {
+                            LocalDate dob) {
         this.id = id;
         this.name = name;
         this.email = email;
         this.dob = dob;
-        this.age = age;
     }
 
     // without the id - db will generate it
 
     public Student(String name,
                        String email,
-                       LocalDate dob,
-                       Integer age) {
+                       LocalDate dob) {
         this.name = name;
         this.email = email;
         this.dob = dob;
-        this.age = age;
     }
 
     //   P2d getters and setters
@@ -90,8 +91,11 @@ public class Student {
         this.dob = dob;
     }
 
+    // P10b - calculate the age
+        // calculate the age
     public Integer getAge() {
-        return age;
+
+        return Period.between(this.dob, LocalDate.now()).getYears();
     }
 
     public void setAge(Integer age) {

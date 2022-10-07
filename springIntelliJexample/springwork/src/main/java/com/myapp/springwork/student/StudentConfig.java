@@ -18,6 +18,7 @@ public class StudentConfig {
 
     // add Bean
         // inject the student repo, name it repository
+    // P10 remove hard coded age
     @Bean
     CommandLineRunner commandLineRunner(StudentRepository repository) {
         return arg -> {
@@ -25,15 +26,13 @@ public class StudentConfig {
             Student jordy = new Student(
                     "Jordy",
                     "jordy.demo@demo.com",
-                    LocalDate.of(1994, MARCH, 21),
-                    28
+                    LocalDate.of(1994, MARCH, 21)
             );
 
             Student maxine = new Student(
                     "Maxine",
                     "maxine.demo@demo.com",
-                    LocalDate.of(1997, JUNE, 24),
-                    25
+                    LocalDate.of(2000, JUNE, 24)
             );
 
             // save the students to the db
