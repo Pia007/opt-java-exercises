@@ -1,0 +1,6 @@
+com\myapp\springwork\student\StudentService.class
+com\myapp\springwork\SpringworkApplication.class
+com\myapp\springwork\student\StudentConfig.class
+com\myapp\springwork\student\StudentController.class
+com\myapp\springwork\student\Student.class
+com\myapp\springwork\student\StudentRepository.class
