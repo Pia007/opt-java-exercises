@@ -26,4 +26,9 @@ public class StudentService {
     public List<Student> getStudents() {
         return studentRepository.findAll();
     }
+
+    //P11b created add student method
+    public void addNewStudent(Student student) {
+        System.out.println(student);
+    }
 }
