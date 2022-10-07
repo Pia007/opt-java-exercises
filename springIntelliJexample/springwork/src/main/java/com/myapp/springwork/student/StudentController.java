@@ -45,4 +45,16 @@ public class StudentController {
     public void deleteStudent(@PathVariable("studentId") Long studentId) {
         studentService.deleteStudent(studentId);
     };
+
+    //P14
+    @PutMapping(path = "{studentId}")
+    public void updateStudent(
+        @PathVariable("studentId") Long studentId,
+        // name and email are not required - can update one or all but not req'd
+        @RequestParam(required = false)  String name,
+        @RequestParam(required = false) String email) {
+        // pass the id, name, email into update()
+        studentService.updateStudent(studentId, name, email);
+
+    }
 }

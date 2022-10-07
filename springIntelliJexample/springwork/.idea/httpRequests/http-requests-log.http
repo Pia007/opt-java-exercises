@@ -1,3 +1,15 @@
+PUT http://localhost:8080/api/v1/student/2?name=Margaret&email=maggie.demo@demo.com
+
+###
+
+PUT http://localhost:8080/api/v1/student/2?name=Margaret
+
+###
+
+PUT http://localhost:8080/api/v1/student/2?name=Margaret
+
+###
+
 DELETE http://localhost:8080/api/v1/student/1
 
 ###
