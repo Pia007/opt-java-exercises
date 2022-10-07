@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 import java.time.LocalDate;
 import java.time.Month;
 import java.util.List;
+import java.util.Optional;
 
 // P5 - applied @Service annotation to StudentServices, same as @Component
     // Spring will scan and identify it as a Bean and autowire it where indicated
@@ -29,6 +30,14 @@ public class StudentService {
 
     //P11b created add student method
     public void addNewStudent(Student student) {
+        //P12b
+        Optional<Student> studentOptional = studentRepository.findStudentByEmail(student.getEmail());
+        // save the student if the email is not given
+        if (studentOptional.isPresent()) {
+            throw new IllegalStateException(" email taken");
+        }
+        studentRepository.save(student);
+
         System.out.println(student);
     }
 }
