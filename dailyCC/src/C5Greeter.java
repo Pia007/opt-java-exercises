@@ -6,6 +6,9 @@ public class C5PGreeter {
         // if person is a student, return "Hey Friendly, you are not alone!"
         // if person is a staff, return "Thanks Chuchu for all your help with advising"
 
+    // solution  can be ran here
+    // https://www.learncs.online/practice/java/polymorphic-greeter?returnTo=polymorphism#polymorphic-greeter
+    
     public static String greet(Person person) {
         if (person instanceof Professor) {
             String name = person.getName();
